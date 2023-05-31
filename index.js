@@ -26,4 +26,19 @@ app.ticker.add((delta) => {
     let angle = Math.atan2(cursorPosition.y - square.postion.y, cursorPosition.x - square.postion.x
         ) + 
         Math.PI / 2;
-})
+        square.rotation = angle;
+});
+
+function randomSpawnPoint() {
+    let edge = 0; //Math.floor(Math.random() * 4); //random int between 0 and 3 inclusive
+    let spawnPoint = new Victor(0,0);
+    switch(edge) {
+        case 0:
+            spawnPoint.x = canvasSize * Math.random();
+            break;
+        default:
+            break;
+    }
+
+    return spawnPoint;
+}
