@@ -1,0 +1,12 @@
+
+POST https://api.openai.com/v1/engines/davinci-codex/completions
+Authorization: Bearer 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
+
+Content-Type: application/json
+
+{
+  "prompt": "Once upon a time",
+  "max_tokens": 50
+}
+
+{{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}}

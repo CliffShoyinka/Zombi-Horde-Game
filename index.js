@@ -21,6 +21,9 @@ square.tint = 0xea985d;
 
 app.stage.addChild(square);
 
+let enemyRadius = 16;
+const enemy = new PIXI.Graphics();
+
 app.ticker.add((delta) => {
     const cursorPosition = app.renderer.plugins.interaction.mouse.global;
     let angle = Math.atan2(cursorPosition.y - square.postion.y, cursorPosition.x - square.postion.x
